@@ -1,34 +1,58 @@
-const video=document.getElementById("video");
+const video = document.getElementById("video");
+const status = document.getElementById("status");
+const clock = document.getElementById("clock");
+const date = document.getElementById("date");
+const studentName = document.getElementById("studentName");
 
-const status=document.getElementById("status");
+async function startCamera() {
 
-async function startCamera(){
+    try {
 
-try{
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false
+        });
 
-const stream=await navigator.mediaDevices.getUserMedia({
+        video.srcObject = stream;
 
-video:true,
+        await video.play();
 
-audio:false
+        status.innerHTML = "🟢 Kamera Aktif";
 
-});
+    } catch (err) {
 
-video.srcObject=stream;
+        console.log(err);
 
-await video.play();
+        status.innerHTML = "🔴 Kamera Tidak Aktif";
 
-status.innerHTML="📷 Kamera Aktif";
-
-}
-catch(err){
-
-status.innerHTML=err.message;
-
-console.log(err);
-
-}
+    }
 
 }
+
+function updateClock() {
+
+    const now = new Date();
+
+    clock.innerHTML = now.toLocaleTimeString("id-ID");
+
+    date.innerHTML = now.toLocaleDateString("id-ID", {
+
+        weekday: "long",
+
+        day: "numeric",
+
+        month: "long",
+
+        year: "numeric"
+
+    });
+
+}
+
+studentName.innerHTML = "👤 Menunggu Murid...";
+
+setInterval(updateClock,1000);
+
+updateClock();
 
 startCamera();
