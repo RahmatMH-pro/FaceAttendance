@@ -2,38 +2,99 @@
 <html lang="id">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Face Attendance</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
-
-<title>Face Attendance</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>📷 FACE ATTENDANCE</h1>
+    <header>
 
-<p>Student Attendance System</p>
+        <h1>📷 FACE ATTENDANCE</h1>
 
-<video
-id="video"
-autoplay
-playsinline
-muted>
-</video>
+        <p>Student Attendance System</p>
 
-<div id="status">
+    </header>
 
-Menghubungkan kamera...
+    <section class="camera-card">
 
-</div>
+        <video
+            id="video"
+            autoplay
+            muted
+            playsinline>
+        </video>
+
+    </section>
+
+    <section class="status-card">
+
+        <h2 id="status">
+            Menghubungkan Kamera...
+        </h2>
+
+        <h3 id="studentName">
+            👤 Menunggu Murid...
+        </h3>
+
+        <div id="clock">
+            00:00:00
+        </div>
+
+        <div id="date">
+            -
+        </div>
+
+    </section>
+
+    <section class="summary">
+
+        <div class="box">
+
+            <span>Total</span>
+
+            <h2 id="totalStudent">
+                0
+            </h2>
+
+        </div>
+
+        <div class="box">
+
+            <span>Hadir</span>
+
+            <h2 id="presentStudent">
+                0
+            </h2>
+
+        </div>
+
+        <div class="box">
+
+            <span>Belum</span>
+
+            <h2 id="absentStudent">
+                0
+            </h2>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        🟢 Status Server :
+        <strong id="serverStatus">
+            Offline
+        </strong>
+
+    </footer>
 
 </div>
 
