@@ -1,55 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
 
-margin:0;
+    background:#18345d;
 
-background:#16325B;
+    font-family:Arial,Helvetica,sans-serif;
 
-font-family:Arial;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
-color:white;
+    color:white;
 
 }
 
 .container{
 
-width:90%;
+    width:90%;
 
-max-width:900px;
+    max-width:1000px;
 
-text-align:center;
+    margin:auto;
+
+    padding:25px;
+
+}
+
+header{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+header h1{
+
+    font-size:50px;
+
+}
+
+header p{
+
+    margin-top:10px;
+
+    color:#d9d9d9;
+
+}
+
+.camera-card{
+
+    margin-top:20px;
 
 }
 
 video{
 
-width:100%;
+    width:100%;
 
-height:520px;
+    height:520px;
 
-background:black;
+    object-fit:cover;
 
-border-radius:15px;
+    border-radius:18px;
 
-border:4px solid orange;
+    border:4px solid orange;
 
-object-fit:cover;
+    background:black;
+
+}
+
+.status-card{
+
+    background:white;
+
+    color:#17345c;
+
+    margin-top:25px;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
 
 }
 
 #status{
 
-margin-top:20px;
+    color:#ff9800;
 
-font-size:24px;
+}
 
-font-weight:bold;
+#studentName{
+
+    margin-top:20px;
+
+    font-size:28px;
+
+}
+
+#clock{
+
+    margin-top:25px;
+
+    font-size:50px;
+
+    font-weight:bold;
+
+}
+
+#date{
+
+    margin-top:10px;
+
+    font-size:22px;
+
+}
+
+.summary{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.box{
+
+    flex:1;
+
+    background:white;
+
+    color:#17345c;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.box span{
+
+    color:gray;
+
+}
+
+.box h2{
+
+    margin-top:10px;
+
+    font-size:42px;
+
+}
+
+footer{
+
+    margin-top:25px;
+
+    background:white;
+
+    color:#17345c;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    text-align:center;
+
+    font-size:20px;
 
 }
